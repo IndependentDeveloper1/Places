@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html xmlns:th=»http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотеки</title>
+    <div>
+        <div>
+            <a href="/index">
+                <img src="src/logo2.png" class="logo"/>
+            </a>
+        </div>
+    </div>
+</head>
+<body>
+
+<div class="container-post" th:each="post : ${posts}">
+    <div>
+        <div1>
+            <td th:text="${post.getTitle()}"></td>
+        </div1>
+        <div2>
+            <td th:text="${post.getFull_text()}"></td>
+
+        </div2>
+        <div4>
+            <td th:text="${post.getContacts()}"></td>
+        </div4>
+
+    </div>
+    <div>
+        <img th:src="${post.getImg1()}" class="imgs"/>
+        <img th:src="${post.getImg2()}" class="imgs"/>
+    </div>
+
+
+    <div3>
+        <td th:utext="${post.getMapCode()}"colspan="2"></td>
+    </div3>
+</div>
+
+</body>
+<a href="/index" class="floating-button-back" >Назад</a>
+</html>
